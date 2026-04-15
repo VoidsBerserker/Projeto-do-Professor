@@ -3,67 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Simples</title>
+    <title>Projeto Galeria</title>
     <style>
-        /* Estilização do Fundo e Layout */
-        body {
-            background-color: white;
+        /* Reset padrão de quem programa no dia a dia */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .top-bar {
+            background: #1c1e21;
+            padding: 12px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        /* Estilização do Botão */
-        .botao-aperte {
-            padding: 15px 30px;
-            font-size: 18px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            transition: background 0.3s;
+        .btn-nav {
+            color: #fff;
+            text-decoration: none;
+            background: #3a3b3c;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.2s;
         }
 
-        .botao-aperte:hover {
-            background-color: #0056b3;
+        .btn-nav:hover {
+            background: #4e4f50;
         }
 
-        /* Container do GIF */
-        #resultado {
-            margin-top: 20px;
-            display: none; /* Escondido inicialmente */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 0 15px;
         }
 
-        img {
-            max-width: 90%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .img-box {
+            background: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+
+        .img-box img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #606770;
         }
     </style>
 </head>
 <body>
 
-    <button class="botao-aperte" onclick="mostrarGif()">Aperte</button>
-
-    <div id="resultado">
-        <img src="https://i.pinimg.com/originals/22/ae/0d/22ae0d2154ec8bc1f3c431e40e5c64c9.gif" alt="Gif Engraçado">
+    <div class="top-bar">
+        <a href="#" class="btn-nav">Home</a>
+        <a href="https://th.bing.com/th/id/OIP.cxS6omkUmQ7LMKG3_ZZoHAHaGc?w=191&h=180&c=7&r=0&o=7&pid=1.7&rm=3" target="_blank" class="btn-nav">Ver Imagem original</a>
     </div>
 
-    <script>
-        function mostrarGif() {
-            // Seleciona a div do gif e a exibe
-            const divGif = document.getElementById('resultado');
-            divGif.style.display = 'block';
-            
-            // Opcional: Rolar a tela para o gif caso ele apareça fora da visão
-            divGif.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+    <div class="container">
+        <h1>Dashboard Principal</h1>
+        <p>Abaixo você encontra a mídia selecionada para este projeto.</p>
+        
+        <div class="img-box">
+            <img src="https://th.bing.com/th/id/OIP.cxS6omkUmQ7LMKG3_ZZoHAHaGc?w=191&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Visualização">
+        </div>
+    </div>
 
 </body>
 </html>
