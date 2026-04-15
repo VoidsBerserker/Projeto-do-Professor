@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Simples</title>
+    <style>
+        /* Estilização do Fundo e Layout */
+        body {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilização do Botão */
+        .botao-aperte {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .botao-aperte:hover {
+            background-color: #0056b3;
+        }
+
+        /* Container do GIF */
+        #resultado {
+            margin-top: 20px;
+            display: none; /* Escondido inicialmente */
+        }
+
+        img {
+            max-width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="botao-aperte" onclick="mostrarGif()">Aperte</button>
+
+    <div id="resultado">
+        <img src="https://i.pinimg.com/originals/22/ae/0d/22ae0d2154ec8bc1f3c431e40e5c64c9.gif" alt="Gif Engraçado">
+    </div>
+
+    <script>
+        function mostrarGif() {
+            // Seleciona a div do gif e a exibe
+            const divGif = document.getElementById('resultado');
+            divGif.style.display = 'block';
+            
+            // Opcional: Rolar a tela para o gif caso ele apareça fora da visão
+            divGif.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
